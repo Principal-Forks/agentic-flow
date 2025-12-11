@@ -1,0 +1,177 @@
+version: "1.0.0"
+name: "Agentic Flow Component Library"
+description: "AI agent orchestration platform components and relationships"
+
+nodeComponents:
+  # Core Platform Components
+  core:
+    description: "Main agentic-flow platform engine"
+    defaultLabel: "Core Platform"
+    color: "#3B82F6"
+    shape: "rectangle"
+    size: { "width": 120, "height": 60 }
+    tags: ["platform", "typescript", "engine"]
+    icon: "server"
+  
+  reasoningbank:
+    description: "Learning memory system for agents"
+    defaultLabel: "ReasoningBank"
+    color: "#10B981"
+    shape: "rectangle"
+    size: { "width": 100, "height": 80 }
+    tags: ["memory", "neural", "learning"]
+    icon: "brain"
+  
+  agentdb:
+    description: "Database for agent state and data"
+    defaultLabel: "AgentDB"
+    color: "#8B5CF6"
+    shape: "rectangle"
+    size: { "width": 100, "height": 80 }
+    tags: ["storage", "sqlite", "persistence"]
+    icon: "database"
+  
+  agent-booster:
+    description: "Performance optimization layer"
+    defaultLabel: "Agent Booster"
+    color: "#F59E0B"
+    shape: "hexagon"
+    size: { "width": 110, "height": 70 }
+    tags: ["performance", "optimization", "caching"]
+    icon: "rocket"
+  
+  # Agent Types
+  swarm-coordinator:
+    description: "Multi-agent swarm coordination"
+    defaultLabel: "Swarm Coordinator"
+    color: "#EF4444"
+    shape: "hexagon"
+    size: { "width": 130, "height": 70 }
+    tags: ["coordination", "swarm", "multi-agent"]
+    icon: "users"
+  
+  specialized-agents:
+    description: "66 specialized agent types"
+    defaultLabel: "Specialized Agents"
+    color: "#06B6D4"
+    shape: "circle"
+    size: { "width": 140, "height": 70 }
+    tags: ["agents", "ai", "specialized"]
+    icon: "robot"
+  
+  # MCP Integration
+  mcp-tools:
+    description: "213 MCP tools for integration"
+    defaultLabel: "MCP Tools"
+    color: "#84CC16"
+    shape: "rectangle"
+    size: { "width": 100, "height": 60 }
+    tags: ["integration", "mcp", "tools"]
+    icon: "tool"
+  
+  # Transport Layer
+  quic-transport:
+    description: "High-performance communication layer"
+    defaultLabel: "QUIC Transport"
+    color: "#F97316"
+    shape: "rectangle"
+    size: { "width": 120, "height": 60 }
+    tags: ["transport", "quic", "network"]
+    icon: "network"
+  
+  # Consensus Protocols
+  consensus-layer:
+    description: "Distributed consensus protocols"
+    defaultLabel: "Consensus Layer"
+    color: "#EC4899"
+    shape: "hexagon"
+    size: { "width": 120, "height": 70 }
+    tags: ["consensus", "distributed", "protocols"]
+    icon: "shield"
+  
+  # GitHub Integration
+  github-integration:
+    description: "Repository management and automation"
+    defaultLabel: "GitHub Integration"
+    color: "#000000"
+    shape: "rectangle"
+    size: { "width": 130, "height": 60 }
+    tags: ["github", "integration", "automation"]
+    icon: "github"
+  
+  # Billing System
+  billing:
+    description: "Usage tracking and billing"
+    defaultLabel: "Billing System"
+    color: "#059669"
+    shape: "rectangle"
+    size: { "width": 110, "height": 60 }
+    tags: ["billing", "payment", "usage"]
+    icon: "credit-card"
+
+edgeComponents:
+  # Data Flow
+  data-flow:
+    description: "Data movement between components"
+    color: "#6B7280"
+    width: 2
+    directed: true
+    style: "solid"
+    tags: ["data", "flow", "asynchronous"]
+  
+  # Communication
+  agent-communication:
+    description: "Inter-agent messaging"
+    color: "#3B82F6"
+    width: 2
+    directed: true
+    style: "solid"
+    animation: "flow"
+    tags: ["communication", "messaging", "websocket"]
+  
+  # Coordination
+  coordination-signals:
+    description: "Swarm coordination messages"
+    color: "#EF4444"
+    width: 3
+    directed: true
+    style: "dashed"
+    animation: "pulse"
+    tags: ["coordination", "swarm", "mcp"]
+  
+  # Memory Access
+  memory-access:
+    description: "ReasoningBank read/write operations"
+    color: "#10B981"
+    width: 2
+    directed: true
+    style: "solid"
+    tags: ["memory", "access", "neural"]
+  
+  # API Calls
+  api-integration:
+    description: "External API connections"
+    color: "#8B5CF6"
+    width: 2
+    directed: true
+    style: "dotted"
+    tags: ["api", "integration", "external"]
+  
+  # Consensus
+  consensus-messages:
+    description: "Distributed consensus communication"
+    color: "#EC4899"
+    width: 3
+    directed: true
+    style: "solid"
+    animation: "flow"
+    tags: ["consensus", "distributed", "messages"]
+  
+  # Performance
+  optimization-signals:
+    description: "Performance optimization data"
+    color: "#F59E0B"
+    width: 2
+    directed: true
+    style: "dashed"
+    tags: ["performance", "optimization", "metrics"]

@@ -1,0 +1,323 @@
+{
+  "pv": {
+    "name": "Agentic Flow Architecture",
+    "version": "1.0.0"
+  },
+  "nodes": [
+    {
+      "id": "core-platform",
+      "type": "core",
+      "x": 400,
+      "y": 300,
+      "width": 120,
+      "height": 60,
+      "color": "#3B82F6",
+      "pv": {
+        "nodeType": "core",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "reasoningbank",
+      "type": "reasoningbank",
+      "x": 200,
+      "y": 150,
+      "width": 100,
+      "height": 80,
+      "color": "#10B981",
+      "pv": {
+        "nodeType": "reasoningbank",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "agentdb",
+      "type": "agentdb",
+      "x": 600,
+      "y": 150,
+      "width": 100,
+      "height": 80,
+      "color": "#8B5CF6",
+      "pv": {
+        "nodeType": "agentdb",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "agent-booster",
+      "type": "agent-booster",
+      "x": 400,
+      "y": 450,
+      "width": 110,
+      "height": 70,
+      "color": "#F59E0B",
+      "pv": {
+        "nodeType": "agent-booster",
+        "shape": "hexagon"
+      }
+    },
+    {
+      "id": "swarm-coordinator",
+      "type": "swarm-coordinator",
+      "x": 200,
+      "y": 300,
+      "width": 130,
+      "height": 70,
+      "color": "#EF4444",
+      "pv": {
+        "nodeType": "swarm-coordinator",
+        "shape": "hexagon"
+      }
+    },
+    {
+      "id": "specialized-agents",
+      "type": "specialized-agents",
+      "x": 600,
+      "y": 300,
+      "width": 140,
+      "height": 70,
+      "color": "#06B6D4",
+      "pv": {
+        "nodeType": "specialized-agents",
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "mcp-tools",
+      "type": "mcp-tools",
+      "x": 400,
+      "y": 150,
+      "width": 100,
+      "height": 60,
+      "color": "#84CC16",
+      "pv": {
+        "nodeType": "mcp-tools",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "quic-transport",
+      "type": "quic-transport",
+      "x": 100,
+      "y": 450,
+      "width": 120,
+      "height": 60,
+      "color": "#F97316",
+      "pv": {
+        "nodeType": "quic-transport",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "consensus-layer",
+      "type": "consensus-layer",
+      "x": 700,
+      "y": 450,
+      "width": 120,
+      "height": 70,
+      "color": "#EC4899",
+      "pv": {
+        "nodeType": "consensus-layer",
+        "shape": "hexagon"
+      }
+    },
+    {
+      "id": "github-integration",
+      "type": "github-integration",
+      "x": 200,
+      "y": 450,
+      "width": 130,
+      "height": 60,
+      "color": "#000000",
+      "pv": {
+        "nodeType": "github-integration",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "billing",
+      "type": "billing",
+      "x": 600,
+      "y": 450,
+      "width": 110,
+      "height": 60,
+      "color": "#059669",
+      "pv": {
+        "nodeType": "billing",
+        "shape": "hexagon"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "core-to-reasoningbank",
+      "fromNode": "core-platform",
+      "toNode": "reasoningbank",
+      "color": "#10B981",
+      "pv": {
+        "edgeType": "memory-access",
+        "width": 2
+      }
+    },
+    {
+      "id": "core-to-agentdb",
+      "fromNode": "core-platform",
+      "toNode": "agentdb",
+      "color": "#8B5CF6",
+      "pv": {
+        "edgeType": "data-flow",
+        "width": 2
+      }
+    },
+    {
+      "id": "core-to-booster",
+      "fromNode": "core-platform",
+      "toNode": "agent-booster",
+      "color": "#F59E0B",
+      "pv": {
+        "edgeType": "optimization-signals",
+        "width": 2
+      }
+    },
+    {
+      "id": "core-to-swarm",
+      "fromNode": "core-platform",
+      "toNode": "swarm-coordinator",
+      "color": "#EF4444",
+      "pv": {
+        "edgeType": "coordination-signals",
+        "width": 3
+      }
+    },
+    {
+      "id": "core-to-agents",
+      "fromNode": "core-platform",
+      "toNode": "specialized-agents",
+      "color": "#3B82F6",
+      "pv": {
+        "edgeType": "agent-communication",
+        "width": 2
+      }
+    },
+    {
+      "id": "core-to-mcp",
+      "fromNode": "core-platform",
+      "toNode": "mcp-tools",
+      "color": "#84CC16",
+      "pv": {
+        "edgeType": "api-integration",
+        "width": 2
+      }
+    },
+    {
+      "id": "swarm-to-agents",
+      "fromNode": "swarm-coordinator",
+      "toNode": "specialized-agents",
+      "color": "#EF4444",
+      "pv": {
+        "edgeType": "coordination-signals",
+        "width": 3
+      }
+    },
+    {
+      "id": "agents-to-reasoningbank",
+      "fromNode": "specialized-agents",
+      "toNode": "reasoningbank",
+      "color": "#10B981",
+      "pv": {
+        "edgeType": "memory-access",
+        "width": 2
+      }
+    },
+    {
+      "id": "agents-to-agentdb",
+      "fromNode": "specialized-agents",
+      "toNode": "agentdb",
+      "color": "#8B5CF6",
+      "pv": {
+        "edgeType": "data-flow",
+        "width": 2
+      }
+    },
+    {
+      "id": "quic-to-core",
+      "fromNode": "quic-transport",
+      "toNode": "core-platform",
+      "color": "#F97316",
+      "pv": {
+        "edgeType": "agent-communication",
+        "width": 2
+      }
+    },
+    {
+      "id": "consensus-to-swarm",
+      "fromNode": "consensus-layer",
+      "toNode": "swarm-coordinator",
+      "color": "#EC4899",
+      "pv": {
+        "edgeType": "consensus-messages",
+        "width": 3
+      }
+    },
+    {
+      "id": "github-to-core",
+      "fromNode": "github-integration",
+      "toNode": "core-platform",
+      "color": "#000000",
+      "pv": {
+        "edgeType": "api-integration",
+        "width": 2
+      }
+    },
+    {
+      "id": "billing-to-core",
+      "fromNode": "billing",
+      "toNode": "core-platform",
+      "color": "#059669",
+      "pv": {
+        "edgeType": "data-flow",
+        "width": 2
+      }
+    },
+    {
+      "id": "mcp-to-reasoningbank",
+      "fromNode": "mcp-tools",
+      "toNode": "reasoningbank",
+      "color": "#10B981",
+      "pv": {
+        "edgeType": "memory-access",
+        "width": 2
+      }
+    },
+    {
+      "id": "github-to-core",
+      "fromNode": "github-integration",
+      "toNode": "core-platform",
+      "color": "#000000",
+      "pv": {
+        "edgeType": "api-integration",
+        "width": 2
+      }
+    },
+    {
+      "id": "github-to-agents",
+      "fromNode": "github-integration",
+      "toNode": "specialized-agents",
+      "color": "#000000",
+      "pv": {
+        "edgeType": "api-integration",
+        "width": 2
+      }
+    },
+    {
+      "id": "agents-to-github",
+      "fromNode": "specialized-agents",
+      "toNode": "github-integration",
+      "color": "#000000",
+      "pv": {
+        "edgeType": "api-integration",
+        "width": 2
+      }
+    }
+  ]
+}
